@@ -1,0 +1,20 @@
+Nume: BĂDILĂ Gabriel-Alin
+Grupa: CA333
+
+	Atât partea de flex, cât și partea de C++ au fost scrise în același fișier.
+Întâi am adăugat o parte de C++ (zona de incluziuni și definire a câtorva 
+variabile globale), apoi o parte de flex în care am definit expresiile regulate 
+din cadrul temei (simboluri, alfabet, șir, gramatică), regulile de parsare a 
+gramaticii și stări. În starea "INITIAL" citesc paranteza rotundă de deschidere 
+a gramaticii și acolada de deschidere a stărilor gramaticii și sar la starea 
+"STATES", unde am declarat 3 reguli (citesc stări mereu; citesc ultima stare, 
+închid mulțimea de stări și trec la alfabet; sar peste alfabet în caz că e gol).
+În starea "ALPHABET" fie citesc simboluri mereu, fie citesc ultimul simbol și 
+sar în starea "PRODUCTION_RULES". Aici fie sar direct în starea "START_SYMBOL" 
+și citesc simbolul de start (daca nu există reguli), fie citesc reguli de forma:
+(nonterminal, replacement). La sfârșitul stărilor am o regulă în care se intră 
+doar dacă gramatica este invalidă și este afișat mesajul "Syntax error".
+	Partea de C++ de la final conține o serie de funcții prin care: verific 
+apariția erorilor sintactice, verific dacă limbajul conține șirul vid, verific 
+dacă limbajul este nul, afișez nonterminalii inutili, iar în main verific 
+apariția erorii de argument și apelez funcțiile create.
